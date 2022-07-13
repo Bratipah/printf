@@ -10,6 +10,7 @@
 int print_c(va_list c)
 {
 	char ch = (char)va_arg(c, int);
+
 	_putchar(ch);
 	return (1);
 }
@@ -29,18 +30,16 @@ int print_s(va_list s)
 		str = "(null)";
 	for (count = 0; str[count]; count++)
 	{
-
 		_putchar(str[count]);
 	}
 	return (count);
 }
-
 /**
- *print_S - prints the string.
- *@list: list of arguments.
- *
- *Return: length of characters printed.
- */
+  *print_S - prints the string.
+  *@list: list of arguments.
+  *
+  *Return: length of characters printed.
+  */
 int print_S(va_list list)
 {
 	char *hex;
@@ -57,7 +56,6 @@ int print_S(va_list list)
 			_putchar('\\');
 			_putchar('x');
 			len = base_len(s[i], 16);
-
 			if (len != 2)
 			{
 				_putchar('0');
@@ -103,7 +101,6 @@ int print_r(va_list r)
 	}
 	return (count);
 }
-
 /**
  * handle_percent - writes characters after a % if they
  * don't match anything in the struct
@@ -122,7 +119,7 @@ int handle_percent(char ch1, char ch2)
 	else
 	{
 		write(1, &ch1, 1);
-		write(1, &ch2, 1)
+		write(1, &ch2, 1);
 		return (2);
 	}
 }
