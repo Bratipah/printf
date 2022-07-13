@@ -28,7 +28,7 @@ int (*get_specifiers(char ch))(va_list)
 		{'\0', NULL}
 	};
 	for (i = 0; p[i].op; i++)
-	{	
+	{
 		if (ch == p[i].op)
 		{
 			return (p[i].func);
@@ -45,11 +45,9 @@ int (*get_specifiers(char ch))(va_list)
 int _printf(const char *format, ...)
 {
 	int i, count;
-	
 	int (*f)(va_list);
-
 	va_list args;
-	
+
 	if (format == NULL)
 		return (-1);
 
