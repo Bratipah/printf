@@ -8,9 +8,10 @@
 int print_i(va_list i)
 {
 	int a[10];
-	int j, m, n, sum, count
+	int j, m, n, sum, count;
 
 	n = va_arg(i, int);
+
 	count = 0;
 	m = 1000000000;
 	a[0] = n / m;

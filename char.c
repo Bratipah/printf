@@ -44,7 +44,7 @@ int print_S(va_list list)
 {
 	char *hex;
 	char *s = va_arg(list, char *);
-	unsigned int i = 0,
+	unsigned int i = 0, j;
 	int c = 0, len;
 
 	if (s == NULL)
